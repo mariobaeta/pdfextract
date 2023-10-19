@@ -84,14 +84,11 @@ if results_list:
     st.write(f"Número Total de Faturas: {num_faturas}")
     st.write(f"Valor Total Faturado: {valor_total:.2f} EUR")
 
-    
-    if st.button("Exportar para CSV"):
-        csv_file_path = "dataframe.csv"
-        df.to_csv(csv_file_path, index=False)
-        st.write(f"DataFrame exportado como CSV. [Clique aqui para baixar o arquivo CSV](sandbox:/home/{csv_file_path})")
+    st.download_button("Download CSV",
+                       df.to_csv(),
+                       mime= 'text/csv')
 
     
-
 
 else:
     st.write("Nenhum dado extraído dos PDFs selecionados.")
