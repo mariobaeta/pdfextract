@@ -84,21 +84,21 @@ if results_list:
     st.write(f"Número Total de Faturas: {num_faturas}")
     st.write(f"Valor Total Faturado: {valor_total:.2f} EUR")
 
-    # Botões para exportar e abrir o DataFrame
-    if st.button("Abrir como PDF"):
-        pdf_file_path = "dataframe.pdf"
-        df.to_pdf(pdf_file_path)
-        st.write(f"DataFrame exportado como PDF: [Clique aqui para baixar]({pdf_file_path})")
+ # Botões para exportar e abrir o DataFrame
+if st.button("Abrir como PDF"):
+    pdf_file_path = "dataframe.pdf"
+    df.to_pdf(pdf_file_path)
+    st.write(f"DataFrame exportado como PDF: [Clique aqui para baixar]({pdf_file_path})")
 
-    if st.button("Exportar para CSV"):
-        csv_file_path = "dataframe.csv"
-        df.to_csv(csv_file_path, index=False)
-        st.write(f"DataFrame exportado como CSV: [Clique aqui para baixar]({csv_file_path})")
+if st.button("Exportar para CSV"):
+    csv_file_path = "dataframe.csv"
+    df.to_csv(csv_file_path, index=False)
+    st.write(f"DataFrame exportado como CSV: [Clique aqui para baixar]({csv_file_path})")
 
-    if st.button("Exportar para Excel"):
-        excel_file_path = "dataframe.xlsx"
-        df.to_excel(excel_file_path, index=False)
-        st.write(f"DataFrame exportado como Excel: [Clique aqui para baixar]({excel_file_path})")
+ if st.button("Exportar para Excel"):
+    excel_file_path = "dataframe.xlsx"
+    df.to_excel(excel_file_path, index=False)
+    st.write(f"DataFrame exportado como Excel: [Clique aqui para baixar]({excel_file_path})")
 
 
 else:
