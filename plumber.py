@@ -95,10 +95,6 @@ if st.button("Exportar para CSV"):
     df.to_csv(csv_file_path, index=False)
     st.write(f"DataFrame exportado como CSV: [Clique aqui para baixar]({csv_file_path})")
 
- if st.button("Exportar para Excel"):
-     excel_file_path = "dataframe.xlsx"
-     df.to_excel(excel_file_path, index=False)
-     st.write(f"DataFrame exportado como Excel: [Clique aqui para baixar]({excel_file_path})")
 
 
 else:
